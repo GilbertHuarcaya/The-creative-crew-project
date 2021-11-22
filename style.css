@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+  box-sizing: border-box;
+}
+
+header {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.contenido {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.descripcion {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.miembros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.miembro:nth-child(2n) {
+  margin-top: 2rem;
+}
+
+.contenido-miembro {
+  display: grid;
+  grid-template-columns: 1fr 1rem;
+}
+
+.imagen-miembro {
+  height: 230px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.profesion {
+  writing-mode: vertical-lr;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 12px;
+  height: 200px;
+}
+
+.nombre-miembro {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: gray;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+  }
+  .descripcion {
+    max-width: 440px;
+    font-size: 18px;
+  }
+  .miembros {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+    gap: 80px;
+  }
+  .miembro:nth-child(2n) {
+    margin-top: 0rem;
+  }
+  .miembro:nth-child(3n + 2) {
+    margin-top: 2rem;
+  }
+  .imagen-miembro {
+    height: 350px;
+    width: 238px;
+    object-fit: cover;
+  }
+  .nombre-miembro {
+    font-size: 18px;
+  }
+  .profesion {
+    font-size: 12px;
+  }
+}
